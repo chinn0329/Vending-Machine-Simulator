@@ -1,0 +1,27 @@
+# Keil build output
+*.axf
+*.d
+*.dep
+*.htm
+*.lnp
+*.lst
+*.map
+*.o
+*.hex
+*.sct
+*.tra
+*.uvguix.*
+*.bak
+
+# Keil project user settings (machine specific)
+*.uvoptx
+*.uvprojx.bak
+
+# Build folders
+Objects/
+Listings/
+RTE/
+
+# OS
+.DS_Store
+Thumbs.db
