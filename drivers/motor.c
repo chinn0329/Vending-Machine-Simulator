@@ -1,5 +1,16 @@
 #include "motor.h"
 
+/* PWM1 registers — manually defined if LPC214x.h omits them */
+#ifndef PWM1PR
+  #define PWM1PR   (*((volatile unsigned long *) 0xE001400C))
+  #define PWM1TCR  (*((volatile unsigned long *) 0xE0014004))
+  #define PWM1MCR  (*((volatile unsigned long *) 0xE0014014))
+  #define PWM1MR0  (*((volatile unsigned long *) 0xE0014018))
+  #define PWM1MR1  (*((volatile unsigned long *) 0xE001401C))
+  #define PWM1PCR  (*((volatile unsigned long *) 0xE001404C))
+  #define PWM1LER  (*((volatile unsigned long *) 0xE0014050))
+#endif
+
 #define MOTOR_DIR   22
 #define MOTOR_EN    23
 

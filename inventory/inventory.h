@@ -2,6 +2,7 @@
 #define INVENTORY_H
 
 #include "LPC214x.h"
+#include <stdint.h>
 
 #define MAX_ITEMS   12
 

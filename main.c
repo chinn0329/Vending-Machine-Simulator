@@ -1,4 +1,12 @@
 #include "LPC214x.h"
+/* ---- registers missing from this Keil's LPC214x.h ---- */
+#ifndef PLLCON
+  #define PLLCON   (*((volatile unsigned char *)  0xE01FC080))
+  #define PLLCFG   (*((volatile unsigned char *)  0xE01FC084))
+  #define PLLSTAT  (*((volatile unsigned short *) 0xE01FC088))
+  #define PLLFEED  (*((volatile unsigned char *)  0xE01FC08C))
+#endif
+/* ------------------------------------------------------- */
 #include "delay.h"
 #include "keypad.h"
 #include "lcd.h"
